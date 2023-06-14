@@ -1,0 +1,13 @@
+VMD Supported Water residue names = 
+   { "H2O", "HHO", "OHH", "HOH", "OH2",
+     "SOL", "WAT",
+     "TIP", "TIP2", "TIP3", "TIP4",
+     "SPC", NULL };
+
+All waters are therefore given the resname WAT, to be consistent
+
+Other changes necessary are the atom types must be converted from
+A,B to OT,HT
+Segments must be numbered to not contain duplicate resids within 1-9999
+
+This is necessary to use the autoionize tool to add salts.

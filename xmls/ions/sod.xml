@@ -1,0 +1,17 @@
+<ForceField version="0.0.1" name="sodium" combining_rule="geometric">
+ <AtomTypes>
+   <Type name="opls-116" class="Na" element="Na" mass="15.99940" def="[Na]" desc="SPC/E Oxygen" doi="10.1021/j100308a038"/>
+ </AtomTypes>
+ <HarmonicBondForce>
+   <!-- https://github.com/gromacs/gromacs/blob/master/share/top/oplsaa.ff/spce.itp -->
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+   <!-- https://github.com/gromacs/gromacs/blob/master/share/top/oplsaa.ff/spce.itp -->
+   <!-- numpy.deg2rad(109.47).round(8) -->
+   <!-- numpy.__version__ 1.21.1 -->
+ </HarmonicAngleForce>
+ <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+   <!-- https://github.com/gromacs/gromacs/blob/master/share/top/oplsaa.ff/spce.itp -->
+  <Atom type="opls-116" charge="-0.8476" sigma="0.316557" epsilon="0.650194"/>
+ </NonbondedForce>
+</ForceField>
